@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recognition System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Tabs -->
+        <div class="tabs">
+            <div class="tab active" data-tab="face">Face Recognition</div>
+            <div class="tab" data-tab="car">Car Recognition</div>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="content">
+            <!-- Left Panel - ID List -->
+            <div class="sidebar">
+                <ul id="id-list">
+                    <li class="active" data-id="map">Map</li>
+                    <!-- IDs will be dynamically loaded here -->
+                </ul>
+            </div>
+            
+            <!-- Right Panel - Display Area -->
+            <div class="display-panel">
+                <!-- Frequency Controls (only visible when ID is selected) -->
+                <div class="frequency-controls" style="display: none;">
+                    <button class="freq-btn active" data-freq="hourly">Hourly</button>
+                    <button class="freq-btn" data-freq="daily">Daily</button>
+                    <button class="freq-btn" data-freq="weekly">Weekly</button>
+                    <button class="freq-btn" data-freq="monthly">Monthly</button>
+                </div>
+                
+                <!-- Display Area (Map or Chart) -->
+                <div id="display-area">
+                    <div id="map"></div>
+                    <canvas id="chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
