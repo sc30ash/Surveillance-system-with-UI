@@ -51,27 +51,23 @@ The system is specifically trained on CCP Dataset Images and optimized for monit
 
 ## 🏗️ System Architecture
 
-graph TB
-A[Drone Input
-- High-res imgs
-- Video streams
-- Real-time] --> B[AI Processing
-- Face Recog
-- License Plate
-- Object Track]
-B --> C[Web UI
-- Dashboard
-- Live Feed
-- Results]
-B --> D[SQL Database
-- Face data
-- Vehicle data
-- Tracking logs]
-style A fill:#e1f5fe
-style B fill:#f3e5f5
-style C fill:#e8f5e8
-style D fill:#fff3e0
-
++-------------------+    +-------------------+     +-------------------+
+| Drone Input       |--->| AI Processing     |--->| Web UI             |
+|                   |    |                   |    |                    |
+| - High-res imgs   |    | - Face Recog      |    | - Dashboard        |
+| - Video streams   |    | - License Plate   |    | - Live Feed        |
+| - Real-time       |    | - Object Track    |    | - Results          |
++-------------------+    +-------------------+    +-------------------+
+|
+|
+v
++-------------------+
+| SQL Database      |
+|                   |
+| - Face data       |
+| - Vehicle data    |
+| - Tracking logs   |
++-------------------+
 
 ## 🚀 Installation
 
