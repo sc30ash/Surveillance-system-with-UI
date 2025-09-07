@@ -54,9 +54,21 @@ The system is specifically trained on CCP Dataset Images and optimized for monit
 ```mermaid
 %%{init: {"flowchart": {"htmlLabels": false}} }%%
 flowchart LR
-    A[Drone Input \n High-res images \n Video streams \n Real-time] --> B[AI Processing \n Face recognition \n License plate \n Object tracking]
-    B --> C[Web UI \n Dashboard \n Live feed \n Results]
-    C --> D[SQL Database \n Face data \n Vehicle data \n Tracking logs]
+A["<b>Drone Input</b>
+- High-res images
+- Video streams
+- Real-time"] --> B["<b>AI Processing</b>
+- Face recognition
+- License plate
+- Object tracking"]
+B --> C["<b>Web UI</b>
+- Dashboard
+- Live feed
+- Results"]
+B --> D["<b>SQL Database</b>
+- Face data
+- Vehicle data
+- Tracking logs"]
 ```
 
 ## 🚀 Installation
