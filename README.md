@@ -56,7 +56,6 @@ flowchart LR
     B --> C[Web UI<br/>• Dashboard<br/>• Live Feed<br/>• Results]
     C --> D[SQL Database<br/>• Face data<br/>• Vehicle data<br/>• Tracking logs]
 
-
 ## 🚀 Installation
 
 ### Prerequisites
